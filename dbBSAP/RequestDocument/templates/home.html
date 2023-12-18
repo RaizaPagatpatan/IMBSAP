@@ -1,0 +1,65 @@
+{% load static %}
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} BSAP Home {% endblock %}</title>
+    {% block styles %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/home-style.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+    <header>
+        <h1>BARANGAY SERVICES ASSISTANCE PORTAL</h1>
+        <nav>
+            <div class="box-ul-nav">
+
+            <ul>
+                <li><a href="{% url 'home_view' %}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{% url 'document_req' %}">Document Request</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            </div>
+        </nav>
+        <h4><a href="{% url 'login' %}">Login </a> or <a href="{% url 'register' %}">Sign Up </a></h4>
+    </header>
+
+    <main>
+        <table>
+
+        <tr>
+        <div>
+      <th style="text-align: left;">
+          <h1>ACCESS.
+        &nbsp;&nbsp;ENGAGE.
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;CONNECT.</h1>
+        </div>
+
+</th>
+           <th><div class="img-logo"><img src="{% static 'assets/canjulao.jpg' %}" alt="brgy" style="max-width: 300px; margin-left: -600;"></div> </th>
+            </tr>
+        </table>
+        <div><p>
+            Welcome to the Barangay Services Assistance Portal, your digital gateway to a host of essential services and support within our vibrant community.
+
+        </p></div>
+
+
+
+    </main>
+<footer>
+        <div class="container">
+            <p>&copy; 2023 Barangay Services Assistance Portal. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}
+</body>
